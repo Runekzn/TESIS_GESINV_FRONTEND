@@ -1,0 +1,237 @@
+<div class="w-full grid place-items-center ">
+  <div class="py-6 px-6 lg:px-8">
+    <h3 class="mb-4 text-xl font-medium text-gray-900 text-center">
+      Producto
+    </h3>
+    <form
+      class="grid sm:grid-cols-2 w-full gap-5"
+      action="#"
+      [formGroup]="form"
+      #frmCategoria="ngForm"
+      (ngSubmit)="operar()"
+    >
+      <div [hidden]="true">
+        <label for="email" class=" hidden mb-2 text-sm font-medium text-gray-900"
+          >Id</label
+        >
+        <input
+          type="id"
+          name="id"
+          id="id"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="Id"
+          required
+          formControlName="id"
+        />
+      </div>
+
+      <div>
+        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 "
+          >Nombre</label
+        >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="Nombre"
+          required
+          formControlName="nombre"
+        />
+      </div>
+
+      <div>
+        <label for="email" class="block mb-2 text-sm font-medium text-gray-900"
+          >Codigo</label
+        >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="Codigo"
+          required
+          formControlName="codigo"
+        />
+      </div>
+
+      <div>
+        <label for="email" class="block mb-2 text-sm font-medium text-gray-900"
+          >Descripción</label
+        >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="Descripción"
+          required
+          formControlName="descripcion"
+        />
+      </div>
+
+      <div>
+        <label for="email" class="block mb-2 text-sm font-medium text-gray-900"
+          >Precio</label
+        >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="Precio"
+          required
+          formControlName="precio"
+        />
+      </div>
+
+      <div>
+        <label for="email" class="block mb-2 text-sm font-medium text-gray-900"
+          >Stock</label
+        >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="Stock"
+          required
+          formControlName="stock"
+        />
+      </div>
+
+      <div>
+        <label for="email" class="block mb-2 text-sm font-medium text-gray-900"
+          >Imagen</label
+        >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="Categoria"
+          required
+          formControlName="imagen"
+        />
+      </div>
+
+      <div>
+        <label for="email" class="block mb-2 text-sm font-medium text-gray-900"
+          >Imagen</label
+        >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="Categoria"
+          required
+          formControlName="imagen"
+        />
+      </div>
+
+      <div>
+        <label for="email" class="block mb-2 text-sm font-medium text-gray-900"
+          >Iva</label
+        >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="Categoria"
+          required
+          formControlName="iva"
+        />
+      </div>
+
+      <div>
+        <label
+          for="proveedor"
+          class="block mb-2 text-sm font-medium text-gray-900 "
+          >Id Proveedor</label
+        >
+        <select
+          placeholder="Proveedor"
+          required
+          formControlName="iproveedor"
+          id="proveedor"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        >
+        <option selected>Proveedor id</option>
+        <option value="categoria" *ngFor="let x of proveedor">{{x.idProveedor}}</option>
+        </select>
+      </div>
+
+      <div>
+        <label
+          for="proveedor"
+          class="block mb-2 text-sm font-medium text-gray-900 "
+          >Id Categoria</label
+        >
+        <select
+          placeholder="Categoria"
+          required
+          formControlName="icategoria"
+          id="proveedor"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        >
+        <option selected>Categoria id</option>
+        <option value="categoria" *ngFor="let x of categoria">{{x.idCategoria}}</option>
+        </select>
+      </div>
+
+      <div>
+        <label
+          for="proveedor"
+          class="block mb-2 text-sm font-medium text-gray-900 "
+          >Id Marca</label
+        >
+        <select
+          placeholder="Marca"
+          required
+          formControlName="imarca"
+          id="proveedor"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        >
+          <option selected>Marca id</option>
+          <option value="categoria" *ngFor="let x of marca">{{x.idCategoria}}</option>
+
+        </select>
+      </div>
+
+      <div>
+        <label
+          for="proveedor"
+          class="block mb-2 text-sm font-medium text-gray-900 "
+          >Id Zona</label
+        >
+        <select
+          placeholder="Categoria"
+          required
+          formControlName="izona"
+          id="proveedor"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+        >
+        <option selected>Zona id</option>
+        <option value="categoria" *ngFor="let x of zona">{{x.idZona}}</option>
+        </select>
+      </div>
+
+      <button
+        type="submit"
+        class="w-full text-white disabled:opacity-75 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+        [disabled]="frmCategoria.invalid"
+      >
+        <h1>Añadir Categoria</h1>
+      </button>
+      <button
+        type="button"
+        class="w-full text-white disabled:opacity-75 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+        routerLink="/categoria"
+      >
+        Cancelar
+      </button>
+    </form>
+  </div>
+</div>

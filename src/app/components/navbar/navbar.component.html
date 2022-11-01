@@ -1,0 +1,137 @@
+<div class="flex flex-wrap">
+  <div class="w-full sm:my-2 sm:mx-4">
+    <nav
+      class="relative flex flex-wrap items-center justify-between px-2 py-3 bg-slate-200 sm:rounded-lg shadow-lg border-b-2 border-[#ffa62b] shadow-slate-300"
+    >
+      <div
+        class="container px-4 mx-auto flex flex-wrap items-center justify-between"
+      >
+        <div
+          class="w-full relative flex justify-between justify-items-center content-center lg:w-auto px-4 lg:static lg:block lg:justify-start"
+        >
+          <div
+            class="uppercase text-xs font-medium text-[#ffa62b] italic mt-2 lg:mt-0 md:mt-2"
+          >
+            Gestión de Inventario
+          </div>
+          <button
+            class="motion-reduce:transition-none motion-reduce:hover:transform-none text-gray-600 cursor-pointer text-xl leading-none px-3 py-1 rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+            type="button"
+            (click)="toggleNavbar()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+              [ngClass]="{ hidden: menuShow, flex: !menuShow }"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+              [ngClass]="{ hidden: !menuShow, flex: menuShow }"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          [ngClass]="{ hidden: !menuShow, flex: menuShow }"
+          class="lg:flex lg:flex-grow items-center transition duration-150 ease-in-out"
+        >
+          <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+            <li class="nav-item">
+              <a
+                class="px-3 py-2 flex items-center text-sm font-medium leading-snug text-[#489fb5] cursor-pointer"
+                routerLink="/inicio"
+              >
+                Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="px-3 py-2 flex items-center text-sm font-medium leading-snug hover:ease-in hover:duration-200 hover:transition-colors hover:text-[#489fb5] cursor-pointer"
+                routerLink="/proveedor"
+              >
+                Proveedor
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="px-3 py-2 flex items-center text-sm font-medium leading-snug hover:ease-in hover:duration-200 hover:transition-colors hover:text-[#489fb5] cursor-pointer"
+                routerLink="/categoria"
+              >
+                Categoria
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="px-3 py-2 flex items-center text-sm font-medium leading-snug hover:ease-in hover:duration-200 hover:transition-colors hover:text-[#489fb5] cursor-pointer"
+                routerLink="/marca"
+              >
+                Marca
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="px-3 py-2 flex items-center text-sm font-medium leading-snug hover:ease-in hover:duration-200 hover:transition-colors hover:text-[#489fb5] cursor-pointer"
+                routerLink="/zona"
+              >
+                Zona
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="px-3 py-2 flex items-center text-sm font-medium leading-snug hover:ease-in hover:duration-200 hover:transition-colors hover:text-[#489fb5] cursor-pointer"
+                routerLink="/producto"
+              >
+                Producto
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="px-3 py-2 flex items-center text-sm font-medium leading-snug hover:ease-in hover:duration-200 hover:transition-colors hover:text-[#489fb5] cursor-pointer"
+                routerLink="/usuario"
+              >
+                Usuario
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="px-3 py-2 flex items-center text-sm font-medium leading-snug hover:ease-in hover:duration-200 hover:transition-colors hover:text-[#489fb5] cursor-pointer"
+                routerLink="/rol"
+              >
+                Rol
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="px-3 py-2 flex items-center text-sm font-medium leading-snug hover:ease-in hover:duration-200 hover:transition-colors hover:text-[#489fb5] cursor-pointer"
+                routerLink="/ventas"
+              >
+                Ventas
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
